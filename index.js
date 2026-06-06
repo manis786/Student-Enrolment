@@ -3,7 +3,7 @@ import config from "./config/config.js"
 import connectDB from "./config/connectDB.js"
 import studentroutes from "./routes/student.route.js"
 import courseroutes from "./routes/course.route.js"
-
+import enrollrouter from "./routes/enrollment.route.js"
 
 
 const app = express()
@@ -18,6 +18,9 @@ app.use("/api",studentroutes)
 
 app.use("/api",courseroutes)
 
+// Enrollment API
+
+app.use("/api",enrollrouter)
 
 
 app.listen(config.PORT, () => {
