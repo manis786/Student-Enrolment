@@ -2,6 +2,7 @@ import express from "express"
 import config from "./config/config.js"
 import connectDB from "./config/connectDB.js"
 import studentroutes from "./routes/student.route.js"
+import courseroutes from "./routes/course.route.js"
 
 
 
@@ -12,6 +13,10 @@ connectDB()
 // API
 
 app.use("/api",studentroutes)
+
+// Courses API
+
+app.use("/api",courseroutes)
 
 
 

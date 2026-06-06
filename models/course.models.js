@@ -9,7 +9,7 @@ const courseSchema = new mongoose.Schema({
         required: true
     },
     fee: {
-        type: Number,
+        type: String,
         required: true
     },
     duration: {
